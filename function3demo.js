@@ -175,3 +175,9 @@ let hondaSumPrice2 = cars.filter((car) => {
  },0)
 
 console.log("hondaSumPrice2: ", hondaSumPrice2)
+
+let word = "devmountain"
+console.log(word[word.length-1])
+let splitWord = word.split('')
+console.log(splitWord)
+console.log(splitWord[splitWord.length-1])
