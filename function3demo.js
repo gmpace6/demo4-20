@@ -128,6 +128,34 @@ let filterOddnums = numsArr.filter((num) => {
 })
 console.log ("filterOddNums: ", filterOddnums)
 
+// array of objects
+const cars = [
+    {name: 'honda civic', price: 30000},
+    {name: 'toyota corolla', price: 35000},
+    {name: 'kia rio', price: 25000},
+    {name: 'tesla x', price: 60000},
+    {name: 'honda pilot', price: 45000},
+    {name: 'chevy bolt', price: 40000},
+    {name: 'ford focus', price: 20000},
+]
 
-// 4. ----- .reduce()
+// filtering cars that have price >= 30000 using .filter()
+let filteredCars = cars.filter((car) => {
+    return cars.price >= 30000
+})
+console.log("filteredCars: ", filteredCars)
 
+// filtering only honda cars using .filter()
+let hondaCars = cars.filter((car) => {
+    return car.name.includes('honda')
+})
+console.log("hondaCars: ", hondaCars)
+
+// 4. ----- .reduce() = sinlge cbf and returns a single value
+// up to 4 argumants: acculmulator (req), curr val (req), index, array
+let numsArray = [3,1,2,5]
+let reduceSum = numsArray.reduce((accumulator, currentValue) => {
+    console.log(`accumulator: ${accumulator}, currentValue: ${currentValue}`)
+    return accumulator * currentValue
+})
+console.log("reduceSum: ", reduceSum)
