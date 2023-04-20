@@ -167,3 +167,11 @@ console.log("reduceSum: ", reduceSum)
 // get the sum of hondaCars from the 'cars' Array
 let hondaSumPrice = cars.filter((car) => car.name.includes('honda')).reduce((acc, curr) => acc + curr.price, 0)
 console.log("hondaSumPrice: ", hondaSumPrice)
+
+let hondaSumPrice2 = cars.filter((car) => {
+    return car.name.includes('honda')
+}).reduce((acc, curr) => {
+    return acc + curr.price
+ },0)
+
+console.log("hondaSumPrice2: ", hondaSumPrice2)
