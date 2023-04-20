@@ -104,6 +104,15 @@ let nums2x2 = nums2.map((element) => {
 console.log("nums2: ", nums2)
 console.log("nums2x2: ", nums2x2)
 
+//CBF of nums2-1.map instead of in-line CBF
+function cbf(num){
+    return num - 1
+}
+
+let nums2Minus1 = nums2.map(cbf)
+
+console.log("nums2-1: ", nums2Minus1)
+
 // 3. ----- .filter()
 
 // 4. ----- .reduce()
