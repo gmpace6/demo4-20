@@ -137,6 +137,7 @@ const cars = [
     {name: 'honda pilot', price: 45000},
     {name: 'chevy bolt', price: 40000},
     {name: 'ford focus', price: 20000},
+    {name: 'honda odyssey', price: 30000},
 ]
 
 // filtering cars that have price >= 30000 using .filter()
@@ -151,11 +152,18 @@ let hondaCars = cars.filter((car) => {
 })
 console.log("hondaCars: ", hondaCars)
 
-// 4. ----- .reduce() = sinlge cbf and returns a single value
+// 4. ----- .reduce() = single cbf and returns a single value
 // up to 4 argumants: acculmulator (req), curr val (req), index, array
+// .reduce is often used to create a total sum, but can be used for other (more advanced) purposes
 let numsArray = [3,1,2,5]
+// get the sum of the numsArray with .reduce
 let reduceSum = numsArray.reduce((accumulator, currentValue) => {
-    console.log(`accumulator: ${accumulator}, currentValue: ${currentValue}`)
-    return accumulator * currentValue
+    console.log(`accumulator: ${accumulator}, currentValue: ${currentValue}`)// to see process
+    return accumulator + currentValue
 })
 console.log("reduceSum: ", reduceSum)
+
+// 5. ----- chaining
+// get the sum of hondaCars from the 'cars' Array
+let hondaSumPrice = cars.filter((car) => car.name.includes('honda')).reduce((acc, curr) => acc + curr.price, 0)
+console.log("hondaSumPrice: ", hondaSumPrice)
