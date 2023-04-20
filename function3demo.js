@@ -82,6 +82,27 @@ colors.forEach((element) => {
 console.log("colorsCount", colorsCount)
 
 // 2. ----- .map()
+// does not mofidy original array, returns copy of array
+const numArray = [0, 1, 2, 3, 4]
+
+// without arrow function
+const mappedArr = numArray.map(function(num){
+    return num += 2
+})
+
+// // with arrow function
+// const mappedArr = numArray.map(num => num += 2)
+console.log(mappedArr) // [2, 3, 4, 5, 6]
+
+
+let nums2 = [ 1,2,3,4]
+
+// we're going to multiply each number by 2 using .map
+let nums2x2 = nums2.map((element) => {
+    return element*2
+})
+console.log("nums2: ", nums2)
+console.log("nums2x2: ", nums2x2)
 
 // 3. ----- .filter()
 
