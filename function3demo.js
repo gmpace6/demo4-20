@@ -71,13 +71,14 @@ let colors = ["red", "green", "white", "green", 'purple', 'red']
 let colorsCount = {}
 
 colors.forEach((element) => {
+    // create if-statement to check if elements property (red, green, etc.) exists
     if(colorsCount[element]){
+
         colorsCount[element]++
     } else {
         colorsCount[element] = 1
     }
 })
-
 console.log("colorsCount", colorsCount)
 
 // 2. ----- .map()
