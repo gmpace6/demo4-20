@@ -50,15 +50,35 @@ console.log("for-loop")
 console.log("----------")
 let nums = [1,2,3,4,5]
 for(let i=0; i<nums.length; i++){
-    console.log(nums[i], " is at index: ", i)
+    console.log(nums[i], " is at index: ", i, " array: ", nums)
 }// printing elements/indexes with for-loop
 
 console.log("----------")
 console.log("forEach")
 console.log("----------")
-nums.forEach((element, index) => {
-    console.log(element, " is at index: ", index)
+nums.forEach((element, index, array) => {
+    console.log(element, " is at index: ", index, " array: ", array)
+})// printing elements/indexes with forEach
+
+let sum = 0
+nums.forEach(function(element){
+    sum += element
+    console.log(sum)
 })
+console.log(sum) // Sum the 'nums' array
+
+let colors = ["red", "green", "white", "green", 'purple', 'red']
+let colorsCount = {}
+
+colors.forEach((element) => {
+    if(colorsCount[element]){
+        colorsCount[element]++
+    } else {
+        colorsCount[element] = 1
+    }
+})
+
+console.log("colorsCount", colorsCount)
 
 // 2. ----- .map()
 
