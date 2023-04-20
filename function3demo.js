@@ -114,6 +114,20 @@ let nums2Minus1 = nums2.map(cbf)
 console.log("nums2-1: ", nums2Minus1)
 
 // 3. ----- .filter()
+let numsArr = [2,45,3,123,56,4,8,9,33]
+// filter numsArr to get odd numbers with for-loop
+let forLoopOddNums = []
+for(let i=0; i < numsArr.length; i++){
+    numsArr[i] % 2 === 1 ? forLoopOddNums.push(numsArr[i]) : null
+}
+console.log("forLoopOddNums: ", forLoopOddNums)
+
+// filter numsArr to get odd numbers with .filter
+let filterOddnums = numsArr.filter((num) => {
+    return num % 2 === 1
+})
+console.log ("filterOddNums: ", filterOddnums)
+
 
 // 4. ----- .reduce()
 
